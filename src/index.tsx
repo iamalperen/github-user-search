@@ -6,6 +6,7 @@ import {ApolloProvider} from '@apollo/client';
 import {client} from "./apollo-client";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Header from "./components/Header/Header";
+import {SearchPage} from "./containers";
 
 
 ReactDOM.render(
@@ -13,7 +14,7 @@ ReactDOM.render(
         <BrowserRouter>
             <Header/>
             <Routes>
-                <Route path="/" element={<>Search</>}/>
+                <Route path="/" element={<SearchPage/>}/>
                 <Route path="/search/:username" element={<>Search Results</>}/>
                 <Route path="/user/:username" element={<>User Details</>}/>
                 <Route path="/user/:username/repository/:repo" element={<>Repo Details</>}/>

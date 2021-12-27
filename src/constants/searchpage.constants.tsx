@@ -1,0 +1,1 @@
+export const SEARCH_OPERATION_TIMEOUT = 1200; // in ms
