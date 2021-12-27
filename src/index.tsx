@@ -2,15 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import 'normalize.css';
 import './index.css';
-import {client} from "./apollo-client";
 import {ApolloProvider} from '@apollo/client';
+import {client} from "./apollo-client";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Header from "./components/Header/Header";
 
 
 ReactDOM.render(
     <ApolloProvider client={client}>
         <BrowserRouter>
-            <>Header</>
+            <Header/>
             <Routes>
                 <Route path="/" element={<>Search</>}/>
                 <Route path="/search/:username" element={<>Search Results</>}/>
