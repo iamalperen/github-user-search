@@ -1,1 +1,1 @@
-export const SEARCH_OPERATION_TIMEOUT = 1200; // in ms
+export const SEARCH_OPERATION_TIMEOUT = 800; // in ms
