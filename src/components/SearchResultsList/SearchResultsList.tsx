@@ -15,25 +15,29 @@ const SearchResultsList = (props: { data?: any[] }) => {
 
     return (
         <SearchResultsListWrapper data-testid="SearchResultsList">
+            {users.length > 0 &&
             <SearchResultsListTitle>Search Results</SearchResultsListTitle>
+            }
             {
-                users && users.map((item: any) => {
+                users.map((item: any) => {
                     return (
                         <SearchResultsListItem key={item.id}>
-                            <Link
-                                to={`/user/${item.login}`}
-                            >
+                            <Link to={`/user/${item.login}`}>
                                 <SearchResultsListItemImageContainer>
                                     <SearchResultsListItemImage src={item.avatarUrl}/>
                                 </SearchResultsListItemImageContainer>
                                 <SearchResultsListItemDetailContainer>
-                                    <SearchResultsListItemDetailUsername>{item.login}</SearchResultsListItemDetailUsername>
+                                    <SearchResultsListItemDetailUsername>
+                                        {item.login}
+                                    </SearchResultsListItemDetailUsername>
                                 </SearchResultsListItemDetailContainer>
-
                             </Link>
                         </SearchResultsListItem>
                     );
                 })
+            }
+            {users.length === 0 &&
+            <SearchResultsListTitle>No Results Found!</SearchResultsListTitle>
             }
         </SearchResultsListWrapper>
     )

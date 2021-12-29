@@ -31,7 +31,7 @@ const SearchResultsPage = () => {
 
     useEffect(() => {
         if (!loading) {
-            const searchResultsList = data?.search?.edges?.map((user: any) => user.node);
+            const searchResultsList = data.search.edges.filter(user => user.node.__typename === 'User').map((user: any) => user.node);
             setUserList(searchResultsList);
             setPageInfo(data.search.pageInfo);
         }
@@ -76,7 +76,7 @@ const SearchResultsPage = () => {
                 <SearchBox timeout={250} onSearch={searchUser} queryText={username}/>
                 {!loading && <SearchResultsList data={userList}/>}
                 {loading && showLoadingSpinner()}
-                {pageInfo.hasNextPage && showLoadMoreButton()}
+                {(!loading && pageInfo.hasNextPage) && showLoadMoreButton()}
             </SearchResultsPageContainer>
         </SearchResultsPageWrapper>
     );

@@ -18,14 +18,16 @@ const SearchResultsListLoading = styled.div`
 
 const SearchResultsListLoadMoreButton = styled.button`
   display: block;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 32px;
   text-align: center;
-  font-size: 24px;
+  font-size: 14px;
   border: 0;
   padding: 16px;
   cursor: pointer;
+  color: #24292f;
 `;
 
 const SearchResultsListLoadMoreButtonText = styled.span`

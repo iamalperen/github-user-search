@@ -30,6 +30,7 @@ const SearchResultsListItem = styled.div`
 
 const SearchResultsListItemImageContainer = styled.div`
   width: 80px;
+  padding-left: 20px;
 `;
 
 const SearchResultsListItemImage = styled.img`
@@ -48,6 +49,7 @@ const SearchResultsListItemDetailContainer = styled.div`
 const SearchResultsListItemDetailUsername = styled.p`
   margin: 8px;
   font-size: 24px;
+  color: #0969da;
 `;
 
 export {

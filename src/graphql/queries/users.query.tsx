@@ -17,7 +17,7 @@ const SEARCH_USERS = gql`
       pageInfo {
           endCursor
           hasNextPage
-        }
+      }
     }
   }
 `;
