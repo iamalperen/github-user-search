@@ -12,13 +12,13 @@ Demo : https://serene-sands-69695.herokuapp.com/
 Screenshots :
 
 
-![](https://raw.githubusercontent.com/iamalperen/github-user-search/master/ss1.png)
+![](https://github.com/iamalperen/github-user-search/blob/main/ss1.png)
 
-![](https://raw.githubusercontent.com/iamalperen/github-user-search/master/ss2.png)
+![](https://github.com/iamalperen/github-user-search/blob/main/ss2.png)
 
-![](https://raw.githubusercontent.com/iamalperen/github-user-search/master/ss3.png)
+![](https://github.com/iamalperen/github-user-search/blob/main/ss3.png)
 
-![](https://raw.githubusercontent.com/iamalperen/github-user-search/master/ss4.png)
+![](https://github.com/iamalperen/github-user-search/blob/main/ss4.png)
 
 
 ## Used Technologies
