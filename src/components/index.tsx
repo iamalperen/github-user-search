@@ -5,3 +5,4 @@ export {default as UserDetailCard} from './UserDetailCard/UserDetailCard';
 export {default as UserRepoList} from './UserRepoList/UserRepoList';
 export {default as RepoDetailCard} from './RepoDetailCard/RepoDetailCard';
 export {default as RepoIssueList} from './RepoIssueList/RepoIssueList';
+export {default as CreateIssueModal} from './CreateIssueModal/CreateIssueModal';

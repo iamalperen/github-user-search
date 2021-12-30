@@ -11,7 +11,7 @@ import {faStar} from "@fortawesome/free-solid-svg-icons";
 import {UserRepoListStarCount} from "../UserRepoList/UserRepoList.styles";
 import {useParams} from "react-router-dom";
 
-const RepoDetailCard = (props: { details: any }) => {
+const RepoDetailCard = (props: { details?: any }) => {
     const params = useParams();
     const userQuery = params.username;
     const repo = params.repo;

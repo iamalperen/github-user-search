@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
     RepoIssueListContainer,
     RepoIssueListCreateButton,
@@ -11,15 +11,19 @@ import {
 import {SearchResultsListTitle} from "../SearchResultsList/SearchResultsList.styles";
 import {useParams} from "react-router-dom";
 import {timeSince} from "../../common/utils";
+import CreateIssueModal from "../CreateIssueModal/CreateIssueModal";
 
-const RepoIssueList = (props: { issues?: any[] }) => {
+const RepoIssueList = (props: { issues?: any[], refetch: any }) => {
     const issues: any[] = props.issues;
     const params = useParams();
     const userQuery = params.username;
     const repo = params.repo;
+    const [isOpen, setIsOpen] = useState(false);
 
-    const openCreateIssueModal = () => {
-        console.log("create issue");
+
+    const openCreateIssueModal = (showModal) => {
+        setIsOpen(showModal);
+        console.log(showModal);
     }
 
     console.log(issues);
@@ -31,9 +35,9 @@ const RepoIssueList = (props: { issues?: any[] }) => {
                 <SearchResultsListTitle>Open Issues</SearchResultsListTitle>
                 }
                 {issues.length === 0 &&
-                <SearchResultsListTitle>No Opened Issues Found!</SearchResultsListTitle>
+                <SearchResultsListTitle>No Open Issue Found!</SearchResultsListTitle>
                 }
-                <RepoIssueListCreateButton onClick={() => openCreateIssueModal()}>Create
+                <RepoIssueListCreateButton onClick={() => openCreateIssueModal(true)}>Create
                     Issue</RepoIssueListCreateButton>
             </RepoIssueListHeader>
             <RepoIssueListContainer>
@@ -49,6 +53,7 @@ const RepoIssueList = (props: { issues?: any[] }) => {
                     })
                 }
             </RepoIssueListContainer>
+            <CreateIssueModal refetch={props.refetch} onOpend={openCreateIssueModal} openModal={isOpen}/>
         </RepoIssueListWrapper>
     );
 }

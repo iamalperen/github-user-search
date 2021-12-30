@@ -4,7 +4,7 @@ const FETCH_USER_REPOS = gql`
   query FetchRepos($userQuery: String!, $cursor: String) {
       user(login: $userQuery) {
         id
-        repositories(first: 10, after: $cursor) {
+        repositories(first: 10, after: $cursor, orderBy: {field: CREATED_AT, direction: DESC}) {
           edges {
             node {
               id

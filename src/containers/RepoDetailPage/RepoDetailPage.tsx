@@ -22,7 +22,7 @@ const RepoDetailPage = () => {
     const userQuery = params.username;
     const repo = params.repo;
 
-    const {loading, error, data, fetchMore} = useQuery(FETCH_REPO_ISSUES, {
+    const {loading, error, data, fetchMore, refetch} = useQuery(FETCH_REPO_ISSUES, {
         variables: {
             userQuery: userQuery,
             repo: repo
@@ -84,7 +84,7 @@ const RepoDetailPage = () => {
                 {!loading && (
                     <>
                         <RepoDetailCard details={data?.repository}/>
-                        <RepoIssueList issues={issueList}/>
+                        <RepoIssueList issues={issueList} refetch={refetch}/>
                     </>
                 )}
                 {loading && (
