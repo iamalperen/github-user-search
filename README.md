@@ -7,7 +7,7 @@ React Github User Search App is proving a web interface to search Github users a
 
 ## Project Overview
 
-Demo : https://serene-sands-69695.herokuapp.com/
+Demo : https://secure-anchorage-68929.herokuapp.com/
 
 Screenshots :
 
@@ -31,6 +31,7 @@ Screenshots :
 - Heroku
 - Apollo-Client
 - FontAwesome Icons
+- Graphql
 
 ## Build
 
