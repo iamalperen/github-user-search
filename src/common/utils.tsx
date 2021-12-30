@@ -1,9 +1,6 @@
 export const timeSince = (date) => {
     const d = new Date(date).getTime();
     const n = Date.now();
-    console.log(n);
-    console.log(d);
-
 
     const seconds = Math.floor((n - d) / 1000);
 

@@ -3,7 +3,7 @@ import {gql} from '@apollo/client';
 const FETCH_REPO_ISSUES = gql`
     query FetchRepoIssues($userQuery: String!, $repo: String!, $cursor: String) {
         repository(name: $repo, owner: $userQuery) {
-            issues(first: 10, after: $cursor, orderBy: {field: CREATED_AT, direction: DESC}) {
+            issues(first: 5, after: $cursor, orderBy: {field: CREATED_AT, direction: DESC}) {
                 edges {
                     node {
                         id

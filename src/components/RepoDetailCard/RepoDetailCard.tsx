@@ -13,9 +13,7 @@ import {useParams} from "react-router-dom";
 
 const RepoDetailCard = (props: { details?: any }) => {
     const params = useParams();
-    const userQuery = params.username;
     const repo = params.repo;
-    console.log(props.details);
 
     return (
         <RepoDetailCardWrapper data-testid="RepoDetailCard">

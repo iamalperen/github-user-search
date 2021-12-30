@@ -18,10 +18,6 @@ const UserRepoList = (props) => {
     const params = useParams()
     const username = params.username;
 
-    console.log(username)
-
-    console.log(repos);
-
     return (
         <UserRepoListWrapper data-testid="UserRepoList">
             {

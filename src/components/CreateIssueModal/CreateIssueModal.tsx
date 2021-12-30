@@ -33,8 +33,6 @@ const CreateIssueModal = ({openModal, onOpend, refetch}) => {
         }
     );
 
-    console.log(openModal)
-
     useEffect(() => {
         onOpend(openModal);
         setShowModal(openModal);
@@ -50,8 +48,6 @@ const CreateIssueModal = ({openModal, onOpend, refetch}) => {
     const createIssue = () => {
         if (title && description) {
             mutateFunction();
-            console.log(title);
-            console.log(description);
             setIsCreating(true);
         }
 

@@ -21,7 +21,8 @@ const SearchBox = (props: { onSearch?: any, queryText?: string, timeout?: number
             <SearchInputWrapper>
                 <SearchInput value={query}
                              onChange={event => setQuery(event.target.value)}
-                             placeholder="Search Users..."/>
+                             placeholder="Search Users..."
+                />
             </SearchInputWrapper>
             <SearchButton onClick={() => searchUser()} disabled={isSearching}>
                 <SearchButtonText>Search</SearchButtonText>

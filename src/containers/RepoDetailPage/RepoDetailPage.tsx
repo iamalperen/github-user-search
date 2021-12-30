@@ -29,8 +29,6 @@ const RepoDetailPage = () => {
         }
     });
 
-    console.log(data);
-
     useEffect(() => {
         if (error) {
             navigate('/');
@@ -56,8 +54,6 @@ const RepoDetailPage = () => {
                 cursor: pageInfo.endCursor
             },
             updateQuery: (prevResult, {fetchMoreResult}) => {
-                console.log(prevResult);
-                console.log(fetchMoreResult);
                 const newResultsList = fetchMoreResult['repository'].issues.edges.map((user: any) => user.node);
                 const combinedResults = [...issueList, ...newResultsList];
                 setIssueList(combinedResults);
@@ -87,9 +83,7 @@ const RepoDetailPage = () => {
                         <RepoIssueList issues={issueList} refetch={refetch}/>
                     </>
                 )}
-                {loading && (
-                    <SearchResultsListLoading> <FontAwesomeIcon icon={faSpinner} spin/> </SearchResultsListLoading>
-                )}
+                {loading && showLoadingSpinner()}
                 {(!loading && pageInfo.hasNextPage) && showLoadMoreButton()}
             </RepoDetailPageContainer>
         </RepoDetailPageWrapper>
